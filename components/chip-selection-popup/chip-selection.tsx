@@ -11,15 +11,14 @@ const ChipSelection: React.FC<IChipSelection> = ({ isOpen, onClose, children }) 
         return null;
     }
 
-    function handleBackdropClick(event: MouseEvent<HTMLDivElement>) {
-        if (event.target === event.currentTarget) {
-            onClose();
-        }
+    function handleBackdropClick(event: MouseEvent<HTMLButtonElement>) {
+        onClose();
     }
 
     return (
-        <div className="modal-backdrop" onClick={handleBackdropClick}>
+        <div className="modal-container">
             <div className="modal-content">{children}</div>
+            <button onClick={handleBackdropClick}>Confirm Selection</button>
         </div>
     );
 }
