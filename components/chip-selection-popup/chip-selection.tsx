@@ -18,7 +18,7 @@ const ChipSelection: React.FC<IChipSelection> = ({ isOpen, onClose, children }) 
     return (
         <div className="modal-container">
             <div className="modal-content">{children}</div>
-            <button onClick={handleBackdropClick}>Confirm Selection</button>
+            <button className=' bg-green-700 py-2 w-full rounded-lg text-lg font-semibold text-white hover:bg-orange-600 hover:scale-x-105 transition-colors duration-100' onClick={handleBackdropClick}>Confirm Selection</button>
         </div>
     );
 }
